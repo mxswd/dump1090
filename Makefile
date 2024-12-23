@@ -11,7 +11,7 @@ EXTRACFLAGS=-DHTMLPATH=\"$(SHAREDIR)\"
 endif
 
 CFLAGS=-O2 -g -Wall -W `pkg-config --cflags librtlsdr`
-LIBS=`pkg-config --libs librtlsdr` -lpthread -lm
+LIBS=-lpthread -lm librtlsdr.a libusb-1.0.a -framework IOKit -framework Foundation -framework Security
 CC=gcc
 
 
